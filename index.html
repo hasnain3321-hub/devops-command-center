@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DevOps Command Center</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #080d1b;
+    color: #f1f5f9;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 7%;
+    border-bottom: 1px solid #25304a;
+    background: #0d1426;
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    color: #60a5fa;
+}
+
+.logo span {
+    color: white;
+}
+
+.live {
+    color: #4ade80;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.hero {
+    padding: 45px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #172554, #312e81, #164e63);
+    border: 1px solid #334b87;
+    box-shadow: 0 15px 50px #0008;
+    margin-bottom: 35px;
+}
+
+.tag {
+    display: inline-block;
+    background: #2563eb44;
+    color: #93c5fd;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #67e8f9;
+}
+
+.hero p {
+    color: #cbd5e1;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+.section-title {
+    font-size: 22px;
+    margin: 35px 0 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111b30;
+    border: 1px solid #263650;
+    border-radius: 16px;
+    padding: 25px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #38bdf8;
+    box-shadow: 0 12px 30px #0284c733;
+}
+
+.icon {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #94a3b8;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 18px;
+    color: #4ade80;
+    background: #14532d55;
+    padding: 7px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.pipeline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.stage {
+    flex: 1;
+    min-width: 130px;
+    background: #17243c;
+    border: 1px solid #334155;
+    border-radius: 12px;
+    padding: 17px 10px;
+    text-align: center;
+}
+
+.stage strong {
+    display: block;
+    margin-bottom: 7px;
+    color: #7dd3fc;
+}
+
+.stage small {
+    color: #94a3b8;
+}
+
+.arrow {
+    color: #38bdf8;
+    font-size: 22px;
+}
+
+footer {
+    text-align: center;
+    border-top: 1px solid #25304a;
+    padding: 28px 15px;
+    color: #64748b;
+    font-size: 13px;
+    margin-top: 60px;
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    main {
+        padding: 35px 16px;
+    }
+
+    .hero {
+        padding: 28px 22px;
+    }
+
+    .pipeline {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .arrow {
+        text-align: center;
+        transform: rotate(90deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">⚡ DEVOPS<span> HUB</span></div>
+    <div class="live">● SYSTEM ONLINE</div>
+</header>
+
+<main>
+
+    <section class="hero">
+        <div class="tag">DAY 18 • PORTFOLIO PROJECT</div>
+
+        <h1>DevOps <span>Command Center</span></h1>
+
+        <p>
+            A modern multi-container application powered by
+            Docker, Docker Compose, Nginx and Alpine Linux.
+            Built as part of my hands-on DevOps learning journey.
+        </p>
+    </section>
+
+    <h2 class="section-title">Infrastructure Overview</h2>
+
+    <section class="grid">
+
+        <div class="card">
+            <div class="icon">🌐</div>
+            <h3>Nginx Web Server</h3>
+            <p>Serving the custom website through an Nginx container.</p>
+            <span class="status">● RUNNING</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">🐳</div>
+            <h3>Docker Engine</h3>
+            <p>Containerized application environment.</p>
+            <span class="status">● ACTIVE</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">📦</div>
+            <h3>Alpine Client</h3>
+            <p>Lightweight client container for network testing.</p>
+            <span class="status">● RUNNING</span>
+        </div>
+
+        <div class="card">
+            <div class="icon">💚</div>
+            <h3>Health Check</h3>
+            <p>Nginx health check configured in Compose.</p>
+            <span class="status">● HEALTHY</span>
+        </div>
+
+    </section>
+
+    <h2 class="section-title">Application Deployment Pipeline</h2>
+
+    <section class="card">
+        <p>Container deployment workflow</p>
+
+        <div class="pipeline">
+            <div class="stage">
+                <strong>01. Build</strong>
+                <small>Dockerfile</small>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="stage">
+                <strong>02. Deploy</strong>
+                <small>Compose</small>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="stage">
+                <strong>03. Serve</strong>
+                <small>Nginx</small>
+            </div>
+
+            <div class="arrow">➜</div>
+
+            <div class="stage">
+                <strong>04. Verify</strong>
+                <small>Health Check</small>
+            </div>
+        </div>
+    </section>
+
+    <h2 class="section-title">Technology Stack</h2>
+
+    <section class="card">
+        <p>
+            Docker &nbsp; • &nbsp;
+            Docker Compose &nbsp; • &nbsp;
+            Nginx &nbsp; • &nbsp;
+            Alpine Linux &nbsp; • &nbsp;
+            Ubuntu Linux &nbsp; • &nbsp;
+            HTML & CSS
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    DevOps Command Center • Day 18 Portfolio Project
+    <br><br>
+    Built with Docker Compose | Learning by Building 🚀
+</footer>
+
+</body>
+</html>
+
